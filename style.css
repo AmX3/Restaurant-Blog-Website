@@ -297,16 +297,16 @@ h3 {
     opacity: 1;
 }
 
-#slider-image-1:target ~ .image-container {
+#sliderImage1:target ~ .image-container {
     /*targeting a different div*/
     right: 0px;
 }
 
-#slider-image-2:target ~ .image-container {
+#sliderImage2:target ~ .image-container {
     right: 300px;
 }
 
-#slider-image-3:target ~ .image-container {
+#sliderImage3:target ~ .image-container {
     right: 600px;
 }
 
