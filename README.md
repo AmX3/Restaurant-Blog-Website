@@ -1,4 +1,4 @@
-**######Restaurant-Blog-Website######**
+######Restaurant-Blog-Website######
 
 **Exploring Sydney**
 
