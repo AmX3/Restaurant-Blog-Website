@@ -196,12 +196,12 @@
     <section class="feedback-and-suggestions" id="contact">
       <h2>Additional Suggestions</h2>
       <hr>
-      <form data-netlify="true" method="POST" onsubmit="return submitMessage(event)" class="contact-form">
-        <label for="fullName">Full Name:</label>
-        <input type="text"  name="Name" id="fullName" required >
+      <form action="https://formspree.io/f/mleznndb" method="POST" class="contact-form">
+        <label for="firstName">First Name:</label>
+        <input type="text"  name="Name" id="firstName" required >
         <label for="email">Email:</label>
-        <input type="text" name="Email" id="email"required> 
-        <label for="Message">Message:</label>
+        <input type="email" name="Email" id="email"required> 
+        <label for="message">Message:</label>
         <textarea type="text" placeholder="Leave your message here." name="Message" id="message" rows="3" cols="20" required></textarea>
 
         <button type="reset">Clear</button>

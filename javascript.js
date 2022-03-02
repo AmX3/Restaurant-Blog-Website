@@ -16,43 +16,6 @@ function toggleMenu() {
     menu.classList.toggle("active");
 }
 
-//DELETE MESSAGES
-function deleteMessages() {
-    if (window.sessionStorage.getItem("message")) {
-        window.sessionStorage.removeItem("message");
-    }
-    renderMessages();
-}
-
-//STORING MESSAGES//
-function submitMessage(event) {
-    //Disrupts the default effect of a form
-    event.preventDefault();
-    const email = document.getElementById("email").value;
-    const fullName = document.getElementById("fullName").value;
-    const message = document.getElementById("message").value;
-
-    const messageObject = {
-        email,
-        fullName,
-        message,
-    };
-
-    let currentMessages = [];
-
-    //if the key of messages does exist, pass the value and store the value as currentMessages within sessionStorage. If it does not exist, store the message as an empty array
-    if (window.sessionStorage.getItem("message")) {
-        currentMessages = JSON.parse(window.sessionStorage.getItem("message"));
-    }
-
-    //push the message value into messageObject
-    currentMessages.push(messageObject);
-    window.sessionStorage.setItem("message", JSON.stringify(currentMessages));
-
-    //Everytime a form is submitted, the changes are updated dynamically
-    renderMessages();
-}
-
 function updateCurrentYear() {
     var present = new Date();
     var year = present.getFullYear();
