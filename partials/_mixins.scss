@@ -1,0 +1,116 @@
+@use "./../partials/palette";
+
+// mixins
+
+@mixin flex(
+    $just-cont: space-between,
+    $align-itm: center,
+    $flx-dir: row,
+    $text-align: center,
+    $flex-wrap: nowrap
+) {
+    display: flex;
+    justify-content: $just-cont;
+    align-items: $align-itm;
+    flex-direction: $flx-dir;
+    text-align: $text-align;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin background-and-color($background, $color) {
+    background-color: $background;
+    color: $color;
+}
+
+@mixin text-style(
+    $size,
+    $weight,
+    $height,
+    $spacing: 0.02em,
+    $transform: none,
+    $decoration: none
+) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    text-transform: $transform;
+    text-decoration: $decoration;
+}
+
+@mixin padding-and-margin($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
+@mixin height-and-width($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+//media-queries
+
+@mixin phone {
+    @media only screen and (max-width: (palette.$phone)) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media only screen and (min-width: (palette.$phone + 1px)) and(max-width: (palette.$tablet-portrait)) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media only screen and (min-width: (palette.$tablet-portrait + 1px)) and (max-width: (palette.$tablet-landscape)) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media only screen and (min-width: (palette.$tablet-landscape + 1px)) {
+        @content;
+    }
+}
+
+@mixin navbar-toggle {
+    @media only screen and (max-width: palette.$tablet-landscape) {
+        @content;
+    }
+}
+
+// extenders
+// %font-body-family {
+//     font-family: palette.$body-font;
+// }
+
+// %font-navbar-family {
+//     font-family: palette.$navbar-font;
+// }
+
+%flexbox {
+    @include flex;
+}
+
+%heading {
+    @include text-style(41px, 800, 36px);
+    text-align: center;
+    margin-bottom: 20px;
+    // font-family: palette.$heading-font;
+}
+
+%fancy-line {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    height: 1.5px;
+    background-image: -webkit-linear-gradient(
+        left,
+        palette.$fancy-line-outer,
+        palette.$fancy-line-inner,
+        palette.$fancy-line-outer
+    );
+    margin-bottom: 60px;
+}

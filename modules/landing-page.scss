@@ -1,0 +1,46 @@
+@use "./../partials/mixins";
+@use "./../partials/palette";
+
+#landingPage {
+    grid-area: hd;
+}
+
+.landing-page {
+    background: url("./../Images/background.jpg");
+    background-position: bottom;
+    background-size: cover;
+    min-height: 100vh;
+    @include mixins.flex($just-cont: center, $align-itm: flex-end);
+
+    &__content {
+        @include mixins.flex($flx-dir: column, $just-cont: flex-end);
+        gap: 20px;
+
+        @include mixins.phone {
+            @include mixins.flex(
+                $flx-dir: column,
+                $just-cont: none,
+                $flex-wrap: nowrap
+            );
+        }
+        height: 35vh;
+    }
+
+    &__heading {
+        font-family: palette.$heading-font;
+        @include mixins.text-style($size: 64px, $weight: 800, $height: 70px);
+        color: whitesmoke;
+    }
+
+    &__arrow {
+        color: whitesmoke;
+        opacity: 0.6;
+
+        transition: all 200ms ease-in-out;
+    }
+
+    &__arrow:hover {
+        transform: rotate(90deg);
+        opacity: 0.6;
+    }
+}

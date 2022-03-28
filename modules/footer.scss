@@ -1,0 +1,45 @@
+@use "./../partials/mixins";
+@use "./../partials/palette";
+
+#footer {
+    grid-area: footer;
+}
+/*FOOTER*/
+
+.contact {
+    &__social-media {
+        @include mixins.flex($just-cont: space-around);
+    }
+
+    &__links {
+        @include mixins.background-and-color(
+            palette.$navbar-links,
+            palette.$primary-color
+        );
+        opacity: 0.8;
+        border-radius: 30%;
+        box-shadow: 0px 5px 15px -5px palette.$link-shadow;
+        transition: all 0.25s;
+        padding: 9px;
+    }
+
+    &__links:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        @include mixins.background-and-color(
+            palette.$primary-color,
+            palette.$navbar-links
+        );
+    }
+
+    &__paragraph {
+        @include mixins.text-style(16px, 300, 26px);
+        font-family: palette.$body-font;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__personal-site {
+        color: palette.$primary-color;
+    }
+}

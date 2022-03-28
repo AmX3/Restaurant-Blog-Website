@@ -1,0 +1,126 @@
+@use "./../partials/palette";
+@use "./../partials/mixins";
+
+.navbar {
+    font-family: palette.$navbar-font;
+    @include mixins.background-and-color(transparent, palette.$white);
+    position: fixed;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    &__container {
+        @extend %flexbox;
+    }
+
+    &__menu {
+        @include mixins.flex($just-cont: flex-end);
+    }
+
+    &__brand {
+        @include mixins.text-style(2em, bold, none);
+        padding: 0.5em 2em;
+        color: palette.$white;
+    }
+
+    &__list {
+        list-style-type: none;
+    }
+
+    &__links {
+        @include mixins.text-style(16px, 100, 27px, $spacing: 0.02em);
+        color: palette.$white;
+        margin: 50px;
+        transition: all 0.2s ease-in-out;
+        opacity: 0.7;
+    }
+
+    &__links:hover {
+        color: palette.$white;
+        opacity: 1;
+        text-decoration: underline palette.$navbar-links 2px;
+        text-underline-position: under;
+    }
+}
+
+/*ADDING JAVASCRIPT -> HEADER CHANGE*/
+.change-color {
+    @include mixins.background-and-color(
+        palette.$white,
+        palette.$primary-color
+    );
+    box-shadow: 0 0 50px #ccc;
+
+    .navbar {
+        &__links {
+            color: palette.$primary-color;
+        }
+
+        &__links:hover {
+            text-decoration: underline palette.$navbar-links 2px;
+        }
+
+        &__brand {
+            color: palette.$primary-color;
+        }
+
+        &__toggle {
+            filter: invert(1);
+        }
+    }
+}
+
+@include mixins.navbar-toggle {
+    .navbar__menu {
+        top: 70px; /*hiding our navbar from view*/
+        left: -100%;
+        position: fixed;
+        display: block;
+        @include mixins.height-and-width(100vh, 100%);
+        text-align: center;
+        transition: 0.5s;
+        z-index: 999;
+        @include mixins.background-and-color(
+            palette.$white,
+            palette.$dark-grey
+        );
+
+        .navbar {
+            height: 7%;
+
+            &__list {
+                @include mixins.flex($just-cont: center);
+            }
+
+            &__links {
+                color: palette.$primary-color;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .navbar__menu.active {
+        left: 0;
+    }
+
+    .navbar__toggle {
+        @include mixins.height-and-width(40px, 37px);
+        background: url(Images/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        float: right;
+        margin-right: 50px;
+    }
+
+    .navbar__toggle.active {
+        background: url(Images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+}
