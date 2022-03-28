@@ -1,0 +1,64 @@
+@use "./../partials/palette";
+@use "./../partials/mixins";
+
+#contact {
+    grid-area: contact;
+}
+
+.suggestions {
+    &__heading {
+        @extend %heading;
+    }
+
+    &__fancy-line {
+        @extend %fancy-line;
+    }
+
+    &__contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-gap: 10px;
+
+        @include mixins.text-style($size: 16px, $weight: 300px, $height: 26px);
+        font-family: palette.$body-font;
+    }
+
+    &__input {
+        margin-bottom: 10px;
+        resize: none; /*Resize textarea is disabled*/
+        font-size: 16px;
+        outline: none;
+    }
+
+    &__text-area {
+        min-height: 200px;
+        font-family: palette.$body-font;
+        @include mixins.text-style($size: 16px, $weight: 300px, $height: 26px);
+        margin-bottom: 10px;
+    }
+
+    &__website-link {
+        font-family: palette.$navbar-font;
+        @include mixins.background-and-color(
+            palette.$website-links,
+            palette.$white
+        );
+        @include mixins.text-style(
+            $size: 14px,
+            $weight: 100,
+            $height: none,
+            $transform: uppercase,
+            $spacing: 0.1em
+        );
+        padding: 1em 1em;
+        border: none;
+
+        &--hover:hover {
+            cursor: pointer;
+            @include mixins.background-and-color(
+                palette.$website-links-hover,
+                palette.$navbar-links
+            );
+        }
+    }
+}

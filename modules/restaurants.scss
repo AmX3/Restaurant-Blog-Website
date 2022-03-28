@@ -1,0 +1,87 @@
+@use "./../partials/palette";
+@use "./../partials/mixins";
+
+#restaurants {
+    grid-area: rest;
+}
+
+.restaurants {
+    @include mixins.background-and-color(
+        palette.$primary-color,
+        palette.$white
+    );
+
+    &__heading {
+        @extend %heading;
+    }
+
+    &__fancy-line {
+        @extend %fancy-line;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__inner-heading {
+        font-family: palette.$heading-font;
+        @include mixins.text-style($size: 32px, $weight: 800, $height: 36px);
+        margin-bottom: 1em;
+    }
+
+    &__flex-container {
+        @include mixins.flex($just-cont: space-around, $text-align: none);
+        margin: 10% 0;
+    }
+
+    &__text-content-on-left {
+        width: 50%;
+    }
+
+    &__paragraph {
+        font-family: palette.$body-font;
+        @include mixins.text-style($size: 16px, $weight: 300, $height: 26px);
+        margin: 1em 0em;
+    }
+
+    &__button-position {
+        margin-top: 2em;
+    }
+
+    &__website-link {
+        font-family: palette.$navbar-font;
+        @include mixins.background-and-color(
+            palette.$website-links,
+            palette.$white
+        );
+        @include mixins.text-style(
+            $size: 14px,
+            $weight: 100,
+            $height: none,
+            $transform: uppercase,
+            $spacing: 0.1em
+        );
+        padding: 1em 1em;
+        border: none;
+
+        &--hover:hover {
+            cursor: pointer;
+            @include mixins.background-and-color(
+                palette.$website-links-hover,
+                palette.$navbar-links
+            );
+        }
+    }
+
+    &__images {
+        height: 300px;
+        width: 300px;
+    }
+
+    &__images-border {
+        padding: 8px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+}

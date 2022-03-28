@@ -10,8 +10,8 @@ window.onscroll = function () {
 };
 
 function toggleMenu() {
-    var menuToggle = document.querySelector(".toggle");
-    var menu = document.querySelector(".menu");
+    var menuToggle = document.querySelector(".navbar__toggle");
+    var menu = document.querySelector(".navbar__menu");
     menuToggle.classList.toggle("active");
     menu.classList.toggle("active");
 }

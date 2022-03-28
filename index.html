@@ -1,242 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exploring Sydney | Vegan & Vegetarian Restaurants</title>
-    <link href="style.css" rel="stylesheet" text="text/css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />  
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exploring Sydney | Vegan & Vegetarian Restaurants</title>
+        <link href="style.css" rel="stylesheet" text="text/css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+            media="all"
+        />
+        <link
+            href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+    </head>
 
-  <body>
-    <header>
-      <nav>
-        <a class="logo" href="#">AD</a>
-        <ul class="menu">
-          <li>
-            <a href="#" onclick="toggleMenu()";>Home</a>
-          </li>
-          <li>
-            <a href="#about" onclick="toggleMenu()";>About</a>
-          </li>
-          <li>
-            <a href="#restaurants" onclick="toggleMenu()";> Restaurants</a>
-          </li>
-          <li>
-           <a href="#contact" onclick="toggleMenu()";>Contact</a>
-          </li>
-        </ul>
-        <div class="toggle" onclick="toggleMenu()";></div>
-      </nav>
-    </header>
-
-    <main>
-    <!-- COVER -->
-    <section class="banner">
-      <h1>Exploring Sydney</h1>
-      <div>
-        <a href="#about" class="scroll-down"></a>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <h2>About</h2>
-      <hr>
-      <p>
-        Growing up being a vegetarian, it was always difficult to find places that were thoroughly enjoyable due to the limited choices when dining out. Therefore I have decided to compile a list of vegetarian restaurant recommendations that are a must-try.
-      </p>
-    </section>
-
-    <!-- RESTAURANTS -->
-    <section class="black-background" id="restaurants">
-      <h2>Restaurants</h2>
-      <hr>
-      <ul> 
-        <li>
-          <div class="text-content-on-left">
-            <div>
-              <h3>Loving Hut</h3>
-              <p>
-                <strong>Price Range: </strong> $$ <br />
-                <i class="fas fa-map-marker-alt"></i> 227 Cabramatta Rd W, Cabramatta NSW 2166 <br />
-              </p>
-              <br>
-              <p>
-                One of my all-time favourites. 
-                The quality of the food is consistent, service is lovely and such affordable prices. They offer a wide selection of choices in which I'm sure that you will find several dishes that you will enjoy. 
-                My regular go-to dish is a tomato noodle soup with vermicelli noodles, accompanied by a selection of toppings.
-              </p>
-              <div class="button-position">
-              <a class="website-link" href="http://www.lovinghutcabramatta.com.au/" target="blank"> Go To Website</a>
-              </div>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a
+                    class="navbar__brand"
+                    href="https://ameliadeng.netlify.app"
+                    target="_blank"
+                    >AD</a
+                >
+                <div class="navbar__toggle" onclick="toggleMenu()" ;></div>
+                <ul class="navbar__menu">
+                    <li class="navbar__list">
+                        <a
+                            href="#"
+                            onclick="toggleMenu()"
+                            ;
+                            class="navbar__links navbar__links--hover"
+                            >Home</a
+                        >
+                    </li>
+                    <li class="navbar__list">
+                        <a
+                            href="#about"
+                            onclick="toggleMenu()"
+                            class="navbar__links navbar__links--hover"
+                            ;
+                            >About</a
+                        >
+                    </li>
+                    <li class="navbar__list">
+                        <a
+                            href="#restaurants"
+                            onclick="toggleMenu()"
+                            class="navbar__links navbar__links--hover"
+                            ;
+                        >
+                            Restaurants
+                        </a>
+                    </li>
+                    <li class="navbar__list">
+                        <a
+                            href="#contact"
+                            onclick="toggleMenu()"
+                            class="navbar__links"
+                            ;
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
             </div>
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/013/130/original/ab020702-1bb7-457a-a2cd-9d18e1994865.jpeg?1626502504" style="float:right; width:400px; height:350px;" class="border-around-images"/>
-          </div>
-        </li>
+        </nav>
 
-        <li>
-          <div class="text-content-on-right">
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/013/131/original/93b1f5b4-1407-4e1e-8590-be9235b288e3.jpeg?1626502562" style="float: left; width:400px; height:350px;" class="border-around-images"/>
-            <div>
-              <h3>Mother Chu's Vegetarian Kitchen</h3>
-              <p>
-                <strong>Price Range: </strong> $$ <br />
-                <i class="fas fa-map-marker-alt"></i> 367 Pitt Street, Sydney, NSW, 2000 <br>
-              </p>
-              <br>
-              <p>
-                Located in the bustling streets of the city, this family-owned business serves a wide selection of vegetarian and vegan delights. 
-                The atmosphere is warm and relaxing from the minute you walk through the door and feels like eating at their family home. 
-                Staff and owner are friendly and will treat you like a regular customer.
-                 Recommendations include corn soup, stir fried rice noodle and salt and pepper deep-fried tofu.
-              </p>
-              <div class="button-position"> 
-                <a class="website-link" href="https://www.motherchusvegetarian.com.au/" target="blank"> Go To Website</a>
-              </div>
-            </div>
-          </div>
-        </li>
+        <div class="grid-wrapper">
+            <section class="landing-page grid-container" id="landingPage">
+                <div class="landing-page__content">
+                    <h1 class="landing-page__heading">Exploring Sydney</h1>
+                    <a href="#about">
+                        <i
+                            class="fa-solid fa-arrow-right fa-3x landing-page__arrow"
+                        ></i>
+                    </a>
+                </div>
+            </section>
 
-        <li>
-          <div class="text-content-on-left">
-            <div>
-              <h3>DOPA</h3>
-              <p>
-                <strong>Price Range: </strong> $$ <br />
-                <i class="fas fa-map-marker-alt"></i> Shop 5-6, 2 Little Hay St, Haymarket NSW 2000 <br />
-              </p>
-              <br>
-              <p>
-                Located in Darling Square, this Japanese place is good for a quick fix. 
-                Alongside your dish, you can upgrade it to a meal that can include miso soup, pickles and a seaweed salad.
-                Options can include scrambled eggs + furikake don, teriyaki eggplant + Pak Choy + tofu don and a vegetable curry don.
-                Furthermore, they have a broad selection of drinks and desserts. 
-                Consistency varies depending on the time you visit and is especially busy towards the weekend.
-              </p>
-              <div class="button-position">
-                <a class="website-link" href="https://dopa.com.au/" target="blank"> Go To Website</a>
-              </div>
-            </div>
-            <div>
-              <img src="https://dopa.com.au/wp-content/uploads/2020/09/Screen-Shot-2020-09-15-at-6.29.28-PM.png" style="float:right; width:400px; height:350px;" class="border-around-images"/>
-            </div>
-          </div>
-        </li>
+            <section class="about grid-container" id="about">
+                <h2 class="about__heading">About</h2>
+                <hr class="about__fancy-line" />
+                <p class="about__paragraph">
+                    Growing up being a vegetarian, it was always difficult to
+                    find places that were thoroughly enjoyable due to the
+                    limited choices when dining out. Therefore I have decided to
+                    compile a list of vegetarian restaurant recommendations that
+                    are a must-try.
+                </p>
+            </section>
 
-        <li>
-          <div class="text-content-on-right">
-            <img src="https://images.happycow.net/venues/1024/54/11/hcmp54113_1024743.jpeg" style="float:left; width:400px; height:350px;" class="border-around-images"/>
-            <div>
-              <h3>Veggie House Restaurant</h3>
-              <p>
-                <strong>Price Range: </strong> $$ <br />
-                <i class="fas fa-map-marker-alt"></i> Shop 3/5 Canley Vale Road, Canley Vale, Sydney, NSW, Australia 2166 <br />
-              </p>
-              <br>
-              <p>
-                Wanting to branch out from the usual restaurants I visit, we came across this place. 
-                My first time trying out this place, I was genuinely surprised at the quality and flavour of the food and exceeded my expectations.
-                Each dish is served piping hot and fresh. 
-                The workers there are hardworking and friendly to each customer. 
-                Definite recommendations include mushroom salad, eggplant and tofu hotpot served with bowls of white rice and their Beijing duck rolls.
-              </p>
-              <div class="button-position">
-                <a class="website-link" href="https://m.facebook.com/veggiehouses" target="blank"> Go To Website</a>
-              </div>
-            </div>
-          </div>
-        </li>
+            <!-- RESTAURANTS -->
+            <section class="restaurants grid-container" id="restaurants">
+                <h2 class="restaurants__heading">Restaurants</h2>
+                <hr class="restaurants__fancy-line" />
+                <ul class="restaurants__list">
+                    <li class="restaurants__list-items">
+                        <div class="restaurants__flex-container">
+                            <div class="restaurants__text-content-on-left">
+                                <h3 class="restaurants__inner-heading">
+                                    Loving Hut
+                                </h3>
+                                <p class="restaurants__paragraph">
+                                    <strong>Price Range: </strong> $$ <br />
+                                    <i class="fas fa-map-marker-alt"></i> 227
+                                    Cabramatta Rd W, Cabramatta NSW 2166 <br />
+                                </p>
+                                <p class="restaurants__paragraph">
+                                    One of my all-time favourites. The quality
+                                    of the food is consistent, service is lovely
+                                    and such affordable prices. They offer a
+                                    wide selection of choices in which I'm sure
+                                    that you will find several dishes that you
+                                    will enjoy. My regular go-to dish is a
+                                    tomato noodle soup with vermicelli noodles,
+                                    accompanied by a selection of toppings.
+                                </p>
+                                <div class="restaurants__button-position">
+                                    <a
+                                        class="restaurants__website-link restaurants__website-link--hover"
+                                        href="http://www.lovinghutcabramatta.com.au/"
+                                        target="_blank"
+                                    >
+                                        Go To Website</a
+                                    >
+                                </div>
+                            </div>
+                            <img
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/013/130/original/ab020702-1bb7-457a-a2cd-9d18e1994865.jpeg?1626502504"
+                                class="restaurants__images restaurants__images-border"
+                            />
+                        </div>
+                    </li>
 
-        <li>
-          <div class="text-content-on-left">
-            <div>
-              <h3>Bar 83 at Sydney Tower</h3>
-              <p>
-                <strong>Price Range: </strong> $$$ <br />
-                <i class="fas fa-map-marker-alt"></i> Level 4 Westfield Sydney <br/>
-              </p>
-              <br>
-              <p>
-                Seated near the window seat, we enjoyed the breathtaking view of Sydney's cityscape. 
-                The service is friendly, the ambience is cosy yet stylish. Their contemporary bar food menu consists of a broad selection of drinks and sides to order.
-                The halloumi sliders were so delicious that we had to order another one.
-                Overall, a memorable experience and a great place to visit alongside friends and family.
-              </p>
-              <div class="button-position">
-                <a class="website-link" href="https://www.bar83sydneytower.com.au/" target="blank"> Go To Website</a>
-              </div>
-            </div>
-            <div class="slide-container">
-              <!--contain all our images and buttons-->
-              <span id="sliderImage1"></span>
-              <span id="sliderImage2"></span>
-              <span id="sliderImage3"></span>
-              <div class="image-container">
-                <!--Image must be in the same folder to embed and contains all our images-->
-                <img src="Images/Bar 83.jpg" style=" width:300px; float: right" alt="View" class="slider-images" />
-                <img src="Images/Sunrise.jpg" style=" width:300px; float: right" alt="View" class="slider-images"/>
-                <img src="Images/Sliders.jpg" style=" width:300px; float: right" alt="View" class="slider-images"/>
-              </div>
-              <div class="button-container">
-                <!--linking buttons to our images-->
-                <a href="#sliderImage1" class="slider-button"></a>
-                <a href="#sliderImage2" class="slider-button"></a>
-                <a href="#sliderImage3" class="slider-button"></a>
-              </div>
-            </div>
-        </li>
-      </ul>
-    </section>
+                    <li class="restaurants__list-items">
+                        <div class="restaurants__flex-container">
+                            <div class="restaurants__text-content-on-left">
+                                <h3 class="restaurants__inner-heading">
+                                    Mother Chu's Vegetarian Kitchen
+                                </h3>
+                                <p class="restaurants__paragraph">
+                                    <strong>Price Range: </strong> $$ <br />
+                                    <i class="fas fa-map-marker-alt"></i> 367
+                                    Pitt Street, Sydney, NSW, 2000 <br />
+                                </p>
+                                <p class="restaurants__paragraph">
+                                    Located in the bustling streets of the city,
+                                    this family-owned business serves a wide
+                                    selection of vegetarian and vegan delights.
+                                    The atmosphere is warm and relaxing from the
+                                    minute you walk through the door and feels
+                                    like eating at their family home. Staff and
+                                    owner are friendly and will treat you like a
+                                    regular customer. Recommendations include
+                                    corn soup, stir fried rice noodle and salt
+                                    and pepper deep-fried tofu.
+                                </p>
+                                <div class="restaurants__button-position">
+                                    <a
+                                        class="restaurants__website-link"
+                                        href="https://www.motherchusvegetarian.com.au/"
+                                        target="_blank"
+                                    >
+                                        Go To Website</a
+                                    >
+                                </div>
+                            </div>
+                            <img
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/013/131/original/93b1f5b4-1407-4e1e-8590-be9235b288e3.jpeg?1626502562"
+                                class="restaurants__images restaurants__images-border"
+                            />
+                        </div>
+                    </li>
 
-    <section class="feedback-and-suggestions" id="contact">
-      <h2>Additional Suggestions</h2>
-      <hr>
-      <form action="https://formspree.io/f/mleznndb" method="POST" class="contact-form">
-        <label for="firstName">First Name:</label>
-        <input type="text"  name="Name" id="firstName" required >
-        <label for="email">Email:</label>
-        <input type="email" name="Email" id="email"required> 
-        <label for="message">Message:</label>
-        <textarea type="text" placeholder="Leave your message here." name="Message" id="message" rows="3" cols="20" required></textarea>
+                    <li class="restaurants__list-items">
+                        <div class="restaurants__flex-container">
+                            <div class="restaurants__text-content-on-left">
+                                <h3 class="restaurants__inner-heading">DOPA</h3>
+                                <p class="restaurants__paragraph">
+                                    <strong>Price Range: </strong> $$ <br />
+                                    <i class="fas fa-map-marker-alt"></i> Shop
+                                    5-6, 2 Little Hay St, Haymarket NSW 2000
+                                    <br />
+                                </p>
+                                <p class="restaurants__paragraph">
+                                    Located in Darling Square, this Japanese
+                                    place is good for a quick fix. Alongside
+                                    your dish, you can upgrade it to a meal that
+                                    can include miso soup, pickles and a seaweed
+                                    salad. Options can include scrambled eggs +
+                                    furikake don, teriyaki eggplant + Pak Choy +
+                                    tofu don and a vegetable curry don.
+                                    Furthermore, they have a broad selection of
+                                    drinks and desserts. Consistency varies
+                                    depending on the time you visit and is
+                                    especially busy towards the weekend.
+                                </p>
+                                <div class="restaurants__button-position">
+                                    <a
+                                        class="restaurants__website-link restaurants__website-link--hover"
+                                        href="https://dopa.com.au/"
+                                        target="_blank"
+                                    >
+                                        Go To Website</a
+                                    >
+                                </div>
+                            </div>
+                            <img
+                                src="https://dopa.com.au/wp-content/uploads/2020/09/Screen-Shot-2020-09-15-at-6.29.28-PM.png"
+                                class="restaurants__images restaurants__images-border"
+                            />
+                        </div>
+                    </li>
 
-        <button type="reset">Clear</button>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
+                    <li class="restaurants__list-items">
+                        <div class="restaurants__flex-container">
+                            <div class="restaurants__text-content-on-left">
+                                <h3 class="restaurants__inner-heading">
+                                    Veggie House Restaurant
+                                </h3>
+                                <p class="restaurants__paragraph">
+                                    <strong>Price Range: </strong> $$ <br />
+                                    <i class="fas fa-map-marker-alt"></i> Shop
+                                    3/5 Canley Vale Road, Canley Vale, Sydney,
+                                    NSW, Australia 2166
+                                    <br />
+                                </p>
+                                <p class="restaurants__paragraph">
+                                    Wanting to branch out from the usual
+                                    restaurants I visit, we came across this
+                                    place. My first time trying out this place,
+                                    I was genuinely surprised at the quality and
+                                    flavour of the food and exceeded my
+                                    expectations. Each dish is served piping hot
+                                    and fresh. The workers there are hardworking
+                                    and friendly to each customer. Definite
+                                    recommendations include mushroom salad,
+                                    eggplant and tofu hotpot served with bowls
+                                    of white rice and their Beijing duck rolls.
+                                </p>
+                                <div class="restaurants__button-position">
+                                    <a
+                                        class="restaurants__website-link"
+                                        href="https://m.facebook.com/veggiehouses"
+                                        target="blank"
+                                    >
+                                        Go To Website</a
+                                    >
+                                </div>
+                            </div>
+                            <img
+                                src="https://images.happycow.net/venues/1024/54/11/hcmp54113_1024743.jpeg"
+                                class="restaurants__images restaurants__images-border"
+                            />
+                        </div>
+                    </li>
+                </ul>
+            </section>
 
-  <!--FOOTER-->
-  <footer class="black-background">
-      <div class="social-media">
-        <ul>
-          <li>
-            <a style="color: white" href="mailto:ameliadeng37@gmail.com">
-            <i class="fas fa-envelope"></i>
-            </a>
-          </li>
-          <li>
-            <a style="color: white" href="https://github.com/AmX3" title="Github" target="blank">
-            <i class="fab fa-github"></i>
-          </a>
-          </li>
-          <li>
-            <a style="color: white" href="https://www.linkedin.com/in/amelia-deng/" title="LinkedIn" target="blank">
-            <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <p>
-        <span>Made by <a href="https://ameliadeng.netlify.app"><strong>Amelia Deng</strong></a> | </span>
-        <span id="currentYear"> </span> 
-      </p>
-  </footer>
+            <section class="suggestions grid-container" id="contact">
+                <h2 class="suggestions__heading">Additional Suggestions</h2>
+                <hr class="suggestions__fancy-line" />
+                <form
+                    action="https://formspree.io/f/mleznndb"
+                    method="POST"
+                    class="suggestions__contact-form"
+                >
+                    <label for="firstName">First Name:</label>
+                    <input
+                        type="text"
+                        name="Name"
+                        id="firstName"
+                        class="suggestions__input"
+                        required
+                    />
+                    <label for="email">Email:</label>
+                    <input
+                        type="email"
+                        name="Email"
+                        id="email"
+                        class="suggestions__input"
+                        required
+                    />
+                    <label for="message">Message:</label>
+                    <textarea
+                        type="text"
+                        placeholder="Leave your message here."
+                        name="Message"
+                        id="message"
+                        rows="3"
+                        cols="20"
+                        class="suggestions__text-area"
+                        required
+                    ></textarea>
+                    <button type="reset" class="suggestions__website-link">
+                        Clear
+                    </button>
+                    <button type="submit" class="suggestions__website-link">
+                        Submit
+                    </button>
+                </form>
+            </section>
 
-  <script src="javascript.js"></script>
-  </body>
+            <!--FOOTER-->
+            <footer class="contact grid-container" id="footer">
+                <div class="contact__social-media">
+                    <a
+                        href="mailto:ameliadeng37@gmail.com"
+                        class="contact__links"
+                    >
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+
+                    <a
+                        href="https://github.com/AmX3"
+                        title="Github"
+                        target="_blank"
+                        class="contact__links"
+                    >
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/amelia-deng/"
+                        title="LinkedIn"
+                        target="_blank"
+                        class="contact__links"
+                    >
+                        <i class="fab fa-linkedin-in fa-2x"></i>
+                    </a>
+                </div>
+                <p class="contact__paragraph">
+                    <span
+                        >Made by
+                        <a
+                            class="contact__personal-site"
+                            href="https://ameliadeng.netlify.app"
+                            target="_blank"
+                            ><strong>Amelia Deng</strong></a
+                        >
+                        |
+                    </span>
+                    <span id="currentYear"> </span>
+                </p>
+            </footer>
+        </div>
+        <script src="javascript.js"></script>
+    </body>
 </html>
