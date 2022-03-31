@@ -107,7 +107,7 @@
 
     .navbar__toggle {
         @include mixins.height-and-width(40px, 37px);
-        background: url(./../images/menu.png);
+        background: url("./../Images/menu.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: 30px;
@@ -117,7 +117,7 @@
     }
 
     .navbar__toggle.active {
-        background: url(./../images/close.png);
+        background: url("./../Images/close.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: 25px;
